@@ -33,10 +33,10 @@ class PersonCRUDSpec extends GebSpec {
 	
 	def "check the entered details"() {
 		expect:
-		firstName.text() == "Luke"
-		lastName.text() == "Daley"
-		enabled.text() == "True"
-		id.text().number
+		firstName == "Luke"
+		lastName == "Daley"
+		enabled == true
+		id.number
 	}
 
 	def "edit the details"() {
@@ -57,8 +57,8 @@ class PersonCRUDSpec extends GebSpec {
 		then:
 		personRows.size() == 1
 		def row = personRow(0)
-		row.firstName.text() == "Luke"
-		row.lastName.text() == "Daley"
+		row.firstName == "Luke"
+		row.lastName == "Daley"
 	}
 	
 	def "show person"() {
@@ -70,12 +70,12 @@ class PersonCRUDSpec extends GebSpec {
 	
 	def "delete user"() {
 		given:
-		def id = id.text()
+		def deletedId = id
 		when:
 		withConfirm { deleteButton.click() }
 		then:
 		at ListPage
-		message.text() == "Person $id deleted"
+		message == "Person $deletedId deleted"
 		personRows.size() == 0
 	}
 }

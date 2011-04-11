@@ -10,9 +10,9 @@ class ShowPage extends ScaffoldPage {
 		editButton(to: EditPage) { $("input", value: "Edit") }
 		deleteButton(to: ListPage) { $("input", value: "Delete") }
 		row { $("td.name", text: it).parent() }
-		value { row(it).find("td.value") }
+		value { row(it).find("td.value").text() }
 		id { value("Id") }
-		enabled { value("Enabled") }
+		enabled { Boolean.valueOf(value("Enabled")) }
 		firstName { value("First Name") }
 		lastName { value("Last Name") }
 	}

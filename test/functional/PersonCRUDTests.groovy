@@ -18,10 +18,10 @@ class PersonCRUDTests extends GebTests {
 		createButton.click()
 		
 		assert at(ShowPage)
-		assert enabled.text() == "True"
-		assert firstName.text() == "Luke"
-		assert lastName.text() == "Daley"
-		assert id.text().number
+		assert enabled == true
+		assert firstName == "Luke"
+		assert lastName == "Daley"
+		assert id.number
 		editButton.click()
 		
 		assert at(EditPage)
@@ -33,16 +33,16 @@ class PersonCRUDTests extends GebTests {
 		to ListPage
 		assert personRows.size() == 1
 		def row = personRow(0)
-		assert row.firstName.text() == "Luke"
-		assert row.lastName.text() == "Daley"
+		assert row.firstName == "Luke"
+		assert row.lastName == "Daley"
 		row.showLink.click()
 		
 		assert at(ShowPage)
-		def id = id.text()
+		def deletedId = id
 		withConfirm { deleteButton.click() }
 		
 		assert at(ListPage)
-		assert message.text() == "Person $id deleted"
+		assert message == "Person $deletedId deleted"
 		assert personRows.size() == 0
 	}
 }

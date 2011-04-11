@@ -20,10 +20,11 @@ class ListPage extends ScaffoldPage {
 class PersonRow extends Module {
 	static content = {
 		cell { $("td", it) }
-		id { cell(0) }
-		enabled { cell(1) }
-		firstName { cell(2) }
-		lastName { cell(3) }
-		showLink(to: ShowPage) { id.find("a") }
+		cellText { cell(it).text() }
+		id { cellText(0) }
+		enabled { Boolean.valueOf(cellText(1)) }
+		firstName { cellText(2) }
+		lastName { cellText(3) }
+		showLink(to: ShowPage) { cell(0).find("a") }
 	}
 }
