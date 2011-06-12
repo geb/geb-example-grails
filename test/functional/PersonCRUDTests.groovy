@@ -1,9 +1,9 @@
-import grails.plugin.geb.GebTests
+import geb.junit4.GebReportingTest
 
 import pages.*
 import org.junit.Test
 
-class PersonCRUDTests extends GebTests {
+class PersonCRUDTests extends GebReportingTest {
 
 	@Test
 	void doSomeCrud() {

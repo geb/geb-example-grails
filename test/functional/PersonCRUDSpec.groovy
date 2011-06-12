@@ -1,12 +1,16 @@
-import grails.plugin.geb.GebSpec
+import geb.spock.GebReportingSpec
 
 import spock.lang.*
 
 import pages.*
 
 @Stepwise
-class PersonCRUDSpec extends GebSpec {
-
+class PersonCRUDSpec extends GebReportingSpec {
+	
+	def setup() {
+		browser.driver.javascriptEnabled = true
+	}
+	
 	def "there are no people"() {
 		when:
 		to ListPage
