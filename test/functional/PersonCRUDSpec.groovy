@@ -7,10 +7,6 @@ import pages.*
 @Stepwise
 class PersonCRUDSpec extends GebReportingSpec {
 	
-	def setup() {
-		browser.driver.javascriptEnabled = true
-	}
-	
 	def "there are no people"() {
 		when:
 		to ListPage
