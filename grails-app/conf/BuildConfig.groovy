@@ -4,7 +4,7 @@ grails.project.dependency.resolution = {
 	inherits("global")
 	log "warn"
 	
-	def gebVersion = "0.6.0-SNAPSHOT"
+	def gebVersion = "0.6.0"
 	def seleniumVersion = "2.0rc3"
 	
 	repositories {
