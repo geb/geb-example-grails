@@ -4,8 +4,8 @@ grails.project.dependency.resolution = {
 	inherits("global")
 	log "warn"
 	
-	def gebVersion = "0.6.0"
-	def seleniumVersion = "2.0rc3"
+	def gebVersion = "0.7.0"
+	def seleniumVersion = "2.21.0"
 	
 	repositories {
 		grailsPlugins()
@@ -32,7 +32,7 @@ grails.project.dependency.resolution = {
 		test ":tomcat:$grailsVersion"
 		test ":hibernate:$grailsVersion"
 		
-		test ":geb:$gebVersion"
-		test ":spock:0.5-groovy-1.7"
+		test ":geb:0.6.3"
+		test ":spock:0.6"
 	}
 }
