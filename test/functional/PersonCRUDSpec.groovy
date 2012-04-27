@@ -36,7 +36,6 @@ class PersonCRUDSpec extends GebReportingSpec {
 		firstName == "Luke"
 		lastName == "Daley"
 		enabled == true
-		id.number
 	}
 
 	def "edit the details"() {

@@ -7,11 +7,10 @@ class ShowPage extends ScaffoldPage {
 	}
 	
 	static content = {
-		editButton(to: EditPage) { $("input", value: "Edit") }
+		editButton(to: EditPage) { $("a", text: "Edit") }
 		deleteButton(to: ListPage) { $("input", value: "Delete") }
-		row { $("td.name", text: it).parent() }
-		value { row(it).find("td.value").text() }
-		id { value("Id") }
+		row { $("li.fieldcontain span.property-label", text: it).parent() }
+		value { row(it).find("span.property-value").text() }
 		enabled { Boolean.valueOf(value("Enabled")) }
 		firstName { value("First Name") }
 		lastName { value("Last Name") }
