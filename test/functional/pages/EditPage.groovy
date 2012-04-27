@@ -1,7 +1,5 @@
 package pages
 
-import pages.modules.*
-
 class EditPage extends ScaffoldPage {
 
 	static at = {
