@@ -21,7 +21,6 @@ class PersonCRUDTests extends GebReportingTest {
 		assert enabled == true
 		assert firstName == "Luke"
 		assert lastName == "Daley"
-		assert id.number
 		editButton.click()
 		
 		assert at(EditPage)

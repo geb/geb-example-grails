@@ -1,11 +1,9 @@
 package pages
 
-import pages.modules.*
-
 class CreatePage extends ScaffoldPage {
 
 	static at = {
-		heading.text() ==~ /Create.+/
+		title ==~ /Create.+/
 	}
 	
 	static content = {
