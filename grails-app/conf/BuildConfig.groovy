@@ -18,6 +18,7 @@ grails.project.dependency.resolution = {
 	
 	def gebVersion = "0.7.0"
 	def seleniumVersion = "2.21.0"
+	def spockVersion = "0.6"
 	
 	repositories {
 		grailsPlugins()
@@ -47,8 +48,8 @@ grails.project.dependency.resolution = {
 
         build ":tomcat:$grailsVersion"
 		
-		test ":geb:0.6.3"
-		test ":spock:0.6"
+		test ":geb:$gebVersion"
+		test ":spock:$spockVersion"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
