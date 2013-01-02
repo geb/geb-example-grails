@@ -2,8 +2,8 @@ grails.servlet.version = "2.5" // Change depending on target container complianc
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
-grails.project.target.level = 1.6
-grails.project.source.level = 1.6
+grails.project.target.level = 1.7
+grails.project.source.level = 1.7
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 grails.project.work.dir = "target"
 
@@ -17,7 +17,7 @@ grails.project.dependency.resolution = {
     checksums true // Whether to verify checksums on resolve
 
     def gebVersion = '0.9.0-RC-1'
-    def seleniumVersion = '2.28.0'
+    def seleniumVersion = '2.27.0'
     def spockVersion = '0.7'
 
     repositories {
@@ -31,11 +31,9 @@ grails.project.dependency.resolution = {
         // mavenRepo "https://nexus.codehaus.org/content/repositories/snapshots"
     }
     dependencies {
-        /*
         test("org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion") {
-            exclude "xml-apis"
+            excludes 'xml-apis'
         }
-        */
         test("org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion")
         test("org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion")
 
@@ -55,10 +53,5 @@ grails.project.dependency.resolution = {
         test(":spock:$spockVersion") {
             exclude "spock-grails-support"
         }
-
-        // Uncomment these (or add new ones) to enable additional resources capabilities
-        //runtime ":zipped-resources:1.0"
-        //runtime ":cached-resources:1.0"
-        //runtime ":yui-minify-resources:0.1.4"
     }
 }
