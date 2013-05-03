@@ -31,9 +31,6 @@ grails.project.dependency.resolution = {
         // mavenRepo "https://nexus.codehaus.org/content/repositories/snapshots"
     }
     dependencies {
-        test("org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion") {
-            excludes 'xml-apis'
-        }
         test("org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion")
         test("org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion")
 
