@@ -38,8 +38,8 @@ grails.project.dependency.resolution = {
 		test("org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion")
 
 		// You usually only need one of these, but this project uses both
-		test "org.codehaus.geb:geb-spock:$gebVersion"
-		test "org.codehaus.geb:geb-junit4:$gebVersion"
+		test "org.gebish:geb-spock:$gebVersion"
+		test "org.gebish:geb-junit4:$gebVersion"
         // Grails 2.2 uses Groovy 2.0, which requires a special Spock version. So to use the Spock plugin with Grails 2.2,
         test "org.spockframework:spock-grails-support:${spockVersion}-groovy-2.0"
 	}
@@ -56,10 +56,5 @@ grails.project.dependency.resolution = {
         test(":spock:${spockVersion}") {
             exclude "spock-grails-support"
         }
-
-        // Uncomment these (or add new ones) to enable additional resources capabilities
-        //runtime ":zipped-resources:1.0"
-        //runtime ":cached-resources:1.0"
-        //runtime ":yui-minify-resources:0.1.4"
 	}
 }
