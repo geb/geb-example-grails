@@ -23,7 +23,7 @@ class PersonCRUDSpec extends GebReportingSpec {
 	
 	def "enter the details"() {
 		when:
-		enabled = true
+		$("#enabled").click()
 		firstName = "Luke"
 		lastName = "Daley"
 		createButton.click()
@@ -44,7 +44,7 @@ class PersonCRUDSpec extends GebReportingSpec {
 		then:
 		at EditPage
 		when:
-		enabled = false
+		$("#enabled").click()
 		updateButton.click()
 		then:
 		at ShowPage
