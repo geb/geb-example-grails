@@ -12,7 +12,7 @@ grails.project.fork = [
     //  compile: [maxMemory: 256, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
 
     // configure settings for the test-app JVM, uses the daemon by default
-    test: false,
+    test: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, forkReserve:false],
     // configure settings for the run-app JVM
     run: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, forkReserve:false],
     // configure settings for the run-war JVM
@@ -32,7 +32,7 @@ grails.project.dependency.resolution = {
     checksums true // Whether to verify checksums on resolve
     legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
-    def gebVersion = "0.9.2-SNAPSHOT"
+    def gebVersion = "0.9.2"
     def seleniumVersion = "2.32.0"
     
     repositories {
@@ -45,7 +45,7 @@ grails.project.dependency.resolution = {
         mavenCentral()
 
         // For Geb snapshot
-        mavenRepo "https://oss.sonatype.org/content/repositories/snapshots"
+        mavenRepo "http://oss.sonatype.org/content/repositories/snapshots"
     }
 
     dependencies {
@@ -66,7 +66,7 @@ grails.project.dependency.resolution = {
         compile ':cache:1.1.1'
 
         // plugins needed at runtime but not for compilation
-        runtime ":hibernate:3.6.10.1" // or ":hibernate4:4.1.11.1"
+        runtime ":hibernate:3.6.10.2" // or ":hibernate4:4.1.11.1"
         runtime ":database-migration:1.3.5"
         runtime ":jquery:1.10.2"
         runtime ":resources:1.2"
