@@ -60,7 +60,7 @@ if "%GRAILS_HOME:~-1%"=="\" SET GRAILS_HOME=%GRAILS_HOME:~0,-1%
 :init
 
 for %%x in ("%HOMEPATH%") do set SHORTHOME=%%~fsx
-if "x%GRAILS_AGENT_CACHE_DIR%" == "x" set GRAILS_AGENT_CACHE_DIR=%SHORTHOME%/.grails/2.3.1/
+if "x%GRAILS_AGENT_CACHE_DIR%" == "x" set GRAILS_AGENT_CACHE_DIR=%SHORTHOME%/.grails/2.3.6/
 set SPRINGLOADED_PARAMS="profile=grails;cacheDir=%GRAILS_AGENT_CACHE_DIR%"
 if not exist "%GRAILS_AGENT_CACHE_DIR%" mkdir "%GRAILS_AGENT_CACHE_DIR%"
 
@@ -80,7 +80,7 @@ set INTERACTIVE=true
 if "x%~1" == "x" goto execute
 set CURR_ARG=%~1
 if "%CURR_ARG:~0,2%" == "-D" (
-	set GRAILS_OPTS=%GRAILS_OPTS% %~1=%~2
+	set CMD_LINE_ARGS=%CMD_LINE_ARGS% %~1=%~2
 	shift
 	shift
 	goto win9xME_args_slurp
@@ -130,7 +130,7 @@ set CMD_LINE_ARGS=%$
 
 :execute
 @rem Setup the command line
-set STARTER_CLASSPATH=wrapper/grails-wrapper-runtime-2.3.1.jar;wrapper;.
+set STARTER_CLASSPATH=wrapper/grails-wrapper-runtime-2.3.6.jar;wrapper;.
 
 if exist "%USERPROFILE%/.groovy/init.bat" call "%USERPROFILE%/.groovy/init.bat"
 
@@ -159,7 +159,7 @@ set JAVA_OPTS=%GRAILS_OPTS% %JAVA_OPTS% %AGENT%
 
 set JAVA_OPTS=%JAVA_OPTS% -Dprogram.name="%PROGNAME%"
 set JAVA_OPTS=%JAVA_OPTS% -Dgrails.home="%GRAILS_HOME%"
-set JAVA_OPTS=%JAVA_OPTS% -Dgrails.version=2.3.1
+set JAVA_OPTS=%JAVA_OPTS% -Dgrails.version=2.3.6
 set JAVA_OPTS=%JAVA_OPTS% -Dbase.dir=.
 set JAVA_OPTS=%JAVA_OPTS% -Dtools.jar="%TOOLS_JAR%"
 set JAVA_OPTS=%JAVA_OPTS% -Dgroovy.starter.conf="%STARTER_CONF%"
