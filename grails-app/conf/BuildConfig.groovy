@@ -5,7 +5,6 @@ grails.project.test.reports.dir = "target/test-reports"
 grails.project.work.dir = "target/work"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
-//grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
@@ -54,25 +53,21 @@ grails.project.dependency.resolution = {
         // You usually only need one of these, but this project uses both
         test "org.gebish:geb-spock:$gebVersion"
         test "org.gebish:geb-junit4:$gebVersion"
+
+        compile 'org.apache.httpcomponents:httpcore:4.3'
+        compile 'org.apache.httpcomponents:httpclient:4.3'
     }
 
     plugins {
         // plugins for the build system only
-        build ":tomcat:7.0.42"
+        build ":tomcat:7.0.54"
 
         // plugins for the compile step
-        compile ":scaffolding:2.0.0"
-        compile ':cache:1.1.1'
+        compile ":scaffolding:2.1.1"
 
         // plugins needed at runtime but not for compilation
-        runtime ":hibernate:3.6.10.2" // or ":hibernate4:4.1.11.1"
-        runtime ":database-migration:1.3.5"
-        runtime ":jquery:1.10.2"
-        runtime ":resources:1.2"
-        // Uncomment these (or add new ones) to enable additional resources capabilities
-        //runtime ":zipped-resources:1.0.1"
-        //runtime ":cached-resources:1.1"
-        //runtime ":yui-minify-resources:0.1.5"
+        runtime ":hibernate:3.6.10.17"
+        runtime ":jquery:1.11.1"
         
         test ":geb:$gebVersion"
     }
