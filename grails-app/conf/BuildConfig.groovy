@@ -32,7 +32,7 @@ grails.project.dependency.resolution = {
     legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     def gebVersion = "0.9.3"
-    def seleniumVersion = "2.42.2"
+    def seleniumVersion = "2.43.1"
     
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
