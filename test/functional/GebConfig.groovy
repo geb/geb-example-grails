@@ -11,3 +11,5 @@ driver = {
 	driverInstance.manage().window().maximize() 
 	driverInstance
 }
+
+baseNavigatorWaiting = true
