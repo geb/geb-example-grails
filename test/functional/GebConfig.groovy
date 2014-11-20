@@ -13,3 +13,4 @@ driver = {
 }
 
 baseNavigatorWaiting = true
+atCheckWaiting = true
