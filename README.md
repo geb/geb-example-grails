@@ -14,8 +14,6 @@ To run the tests you can execute:
 
     ./grailsw test-app functional:
 
-Replace `./grailsw` with `grails.bat` in the above examples if you're on Windows.
-
 # Questions and issues
 
 Please ask questions on [Geb user mailing list](http://xircles.codehaus.org/lists/user@geb.codehaus.org) and raise issues in [Geb issue tracker](https://jira.codehaus.org/browse/GEB).
