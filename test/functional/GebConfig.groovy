@@ -5,6 +5,7 @@
 */
 
 import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.firefox.FirefoxProfile
 
 driver = { 
     	//set the firefox locale to 'en-us' since the tests expect english
