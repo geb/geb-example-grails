@@ -14,7 +14,7 @@ To run the tests you can execute:
 
     ./grailsw test-app functional:
 
-Replace `./grailsw` with `grailsw` in the above examples if you're on Windows using `cmd.exe` (with powershell, the above statement should work :-).
+Replace `./grailsw` with `grailsw` in the above examples if you're on Windows using `cmd.exe` (with powershell, the above statement should work).
 
 # Questions and issues
 
