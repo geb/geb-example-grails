@@ -18,4 +18,4 @@ Replace `./grailsw` with `grailsw` in the above examples if you're on Windows us
 
 # Questions and issues
 
-Please ask questions on [Geb user mailing list](http://xircles.codehaus.org/lists/user@geb.codehaus.org) and raise issues in [Geb issue tracker](https://jira.codehaus.org/browse/GEB).
+Please ask questions on [Geb user mailing list](https://groups.google.com/forum/#!forum/geb-user) and raise issues in [Geb issue tracker]( https://github.com/geb/issues/issues).
