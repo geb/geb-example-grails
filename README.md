@@ -1,4 +1,6 @@
-[![Build Status](https://drone.io/github.com/geb/geb-example-grails/status.png)](https://drone.io/github.com/geb/geb-example-grails/latest)
+# Example Geb and Grails 2 Project
+
+[![Build Status][build_status]](https://drone.io/github.com/geb/geb-example-grails/latest)
 
 # Description
 
@@ -16,6 +18,11 @@ To run the tests you can execute:
 
 Replace `./grailsw` with `grailsw` in the above examples if you're on Windows using `cmd.exe` (with powershell, the above statement should work).
 
-# Questions and issues
+## Questions and issues
 
-Please ask questions on [Geb user mailing list](https://groups.google.com/forum/#!forum/geb-user) and raise issues in [Geb issue tracker]( https://github.com/geb/issues/issues).
+Please ask questions on [Geb user mailing list][mailing_list] and raise issues in [Geb issue tracker][issue_tracker].
+
+
+[build_status]: https://drone.io/github.com/geb/geb-example-grails/status.png "Build Status"
+[mailing_list]: https://groups.google.com/forum/#!forum/geb-user
+[issue_tracker]: https://github.com/geb/issues/issues
