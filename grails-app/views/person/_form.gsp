@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'enabled', 'error')} ">
-	<label for="enabled">
-		<g:message code="person.enabled.label" default="Enabled" />
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'visible', 'error')} ">
+	<label for="visible">
+		<g:message code="person.visible.label" default="Visible" />
 		
 	</label>
-	<g:checkBox name="enabled" value="${personInstance?.enabled}" />
+	<g:checkBox name="visible" value="${personInstance?.visible}" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'firstName', 'error')} ">

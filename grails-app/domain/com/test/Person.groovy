@@ -4,7 +4,7 @@ class Person {
     String firstName
     String lastName
 
-    boolean enabled
+    boolean visible
     static constraints = {
     }
 }

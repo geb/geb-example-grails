@@ -24,7 +24,7 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="enabled" title="${message(code: 'person.enabled.label', default: 'Enabled')}" />
+						<g:sortableColumn property="visible" title="${message(code: 'person.visible.label', default: 'Visible')}" />
 					
 						<g:sortableColumn property="firstName" title="${message(code: 'person.firstName.label', default: 'First Name')}" />
 					
@@ -36,7 +36,7 @@
 				<g:each in="${personInstanceList}" status="i" var="personInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "enabled")}</g:link></td>
+						<td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "visible")}</g:link></td>
 					
 						<td>${fieldValue(bean: personInstance, field: "firstName")}</td>
 					

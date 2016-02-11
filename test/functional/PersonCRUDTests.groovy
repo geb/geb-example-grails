@@ -12,19 +12,19 @@ class PersonCRUDTests extends GebReportingTest {
         newPersonButton.click()
         
         assert at(CreatePage)
-        $("#enabled").click()
+        $("#visible").click()
         firstName = "Luke"
         lastName = "Daley"
         createButton.click()
         
         assert at(ShowPage)
-        assert enabled == true
+        assert visible == true
         assert firstName == "Luke"
         assert lastName == "Daley"
         editButton.click()
         
         assert at(EditPage)
-        $("#enabled").click()
+        $("#visible").click()
         updateButton.click()
         
         assert at(ShowPage)

@@ -31,8 +31,8 @@ grails.project.dependency.resolution = {
     checksums true // Whether to verify checksums on resolve
     legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
-    def gebVersion = "0.12.2"
-    def seleniumVersion = "2.45.0"
+    def gebVersion = "0.13.0"
+    def seleniumVersion = "2.51.0"
     
     repositories {
         inherits true // Whether to inherit repository definitions from plugins

@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list person">
 			
-				<g:if test="${personInstance?.enabled}">
+				<g:if test="${personInstance?.visible}">
 				<li class="fieldcontain">
-					<span id="enabled-label" class="property-label"><g:message code="person.enabled.label" default="Enabled" /></span>
+					<span id="visible-label" class="property-label"><g:message code="person.visible.label" default="Visible" /></span>
 					
-						<span class="property-value" aria-labelledby="enabled-label"><g:formatBoolean boolean="${personInstance?.enabled}" /></span>
+						<span class="property-value" aria-labelledby="visible-label"><g:formatBoolean boolean="${personInstance?.visible}" /></span>
 					
 				</li>
 				</g:if>
