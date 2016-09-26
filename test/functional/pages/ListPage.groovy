@@ -12,7 +12,7 @@ class ListPage extends ScaffoldPage {
 	static content = {
 		newPersonButton(to: CreatePage) { $("a", text: "New Person") }
 		peopleTable { $("div.content table", 0) }
-		personRow { module PersonRow, personRows[it] }
+		personRow { personRows[it].module PersonRow }
 		personRows(required: false) { peopleTable.find("tbody").find("tr") }
 	}
 }
